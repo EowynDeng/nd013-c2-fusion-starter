@@ -116,8 +116,12 @@ class Trackmanagement:
 
         # delete old tracks  
         for track in self.track_list:
-            if track.state is 'confirmed' and track.score <= params.delete_threshold or (track.P[0, 0] >= params.max_P or track.P[1, 1] >= params.max_P):
-                self.delete_track(track)   
+            if (
+                (track.state in ["confirmed"] and track.score < params.delete_threshold)
+                or ((track.P[0, 0] > params.max_P or track.P[1, 1] > params.max_P))
+                or (track.score < 0.05)
+            ):
+                self.delete_track(track)
 
         ############
         # END student code
