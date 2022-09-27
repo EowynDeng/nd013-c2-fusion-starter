@@ -10,15 +10,15 @@ The first step is to implement the Extended Kalman Filter. The direct results ar
 
 The second step is to initiate track and keep maintaining track state and score of surrounding objects. The direct results are shown below with the diagram shows that the track was successfully deleted:
 ![alt text](img/diagram_step_2.png)
-![alt_text](ima/plot_step_2.png)
+![alt_text](img/plot_step_2.png)
 
 The third step implements the nearest neignbor association to the track detection so that the script could handle multiple tracks and keep proper monitoring on them. The direct results are shown below:
 ![alt text](img/diagram_step_3.png)
-![alt_text](ima/plot_step_3.png)
+![alt_text](img/plot_step_3.png)
 
 The fourth step implement the non-linear camera measurement model to utilize camera data to help get rid of ghost tracks. The final results show below with the two tracks tracked from beginning to end with RMSE lower than 0.25.
 ![alt text](img/diagram_step_4.png)
-![alt_text](ima/plot_step_4.png)
+![alt_text](img/plot_step_4.png)
 
 
 ### 2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)? 
